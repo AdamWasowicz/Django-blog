@@ -1,12 +1,21 @@
 {% load static %}
+{% load compress %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Page Title{% endblock title %}</title>
+    <title>{% block title %}DBlock{% endblock title %}</title>
     {% block head %}{% endblock head %}
+    {% compress css %}
+        <link 
+            type="text/x-scss" 
+            href="{% static 'styles/base.scss' %}" 
+            rel="stylesheet" 
+            media="screen"
+        >
+    {% endcompress %}
 </head>
 <body>
     {% block body %}{% endblock body %}

@@ -6,11 +6,8 @@ db.sqlite3
 media
 
 # Other #
-django_blog/Lib
-django_blog/Include
-django_blog/Scripts
-django_blog/pyvenv.cfg
-__pycache__
+django_blog_venv
+staticfiles
 
 # Backup files # 
 *.bak 

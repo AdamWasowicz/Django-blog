@@ -15,6 +15,7 @@ SECRET_KEY = 'django-insecure--s1h$i+tvifou!9@e_h01=$c1eu4deskkzd)7+9d&%f=yt0p1j
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
     getenv('APP_HOST')
 ]
 
@@ -22,6 +23,8 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'post',
+    'compressor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -108,11 +111,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_FINDERS = ( 
+    'django.contrib.staticfiles.finders.FileSystemFinder',  
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',    
+    'compressor.finders.CompressorFinder',
+) 
 STATICFILES_DIRS = [
    BASE_DIR / 'static' 
 ]
+COMPRESS_PRECOMPILERS = (    
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
 
 
 # Default primary key field type

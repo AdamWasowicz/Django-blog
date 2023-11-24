@@ -1,0 +1,11 @@
+<nav class="navigation">
+    <a href="{% url "post-index" %}">
+        {% include "includes/logo.html" %}
+    </a>
+
+    <ul>
+        <li><a href="">Posts</a></li>
+        <li><a href="">Random</a></li>
+        <a href="{% url "post-register" %}">Log in</a>
+    </ul>
+</nav>

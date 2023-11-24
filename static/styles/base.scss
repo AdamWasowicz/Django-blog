@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --TitleFont: 'Roboto';
+    --HeaderFont: 'Merriweather Sans';
+    --TextFont: 'Lato';
+
+
+    --accent-800: #01625a;
+    --accent-700: #019386;
+    --accent-600: #02c4b3;
+    --accent-500: #02f5e0;
+    --accent-400: #35f7e6;
+    --accent-300: #67f9ec;
+    --accent-200: #9afbf3;
+    --accent-100: #ccfdf9;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,5 +25,96 @@
 }
 
 body {
-    background-color: blue;
+    background-color: #ebebeb;
+}
+
+nav {
+    // Size and Position
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    // Text
+    color: white;
+
+    // Background
+    background-color: #1f1f1f;
+
+    > a {
+        // Text
+        text-decoration: none;
+    }
+
+    > ul {
+        // Size and Position
+        display: flex;
+        flex-direction: row;
+        column-gap: 24px;
+        align-items: center;
+
+        // Other
+        list-style: none;
+
+        > li {
+            // Text
+            font-family: var(--TextFont);
+
+            > a {
+                // Text
+                color: white;
+                font-size: 18px;
+                letter-spacing: 2px;
+                text-decoration: none;
+
+                // Other
+                transition: 0.3s;
+
+                &:hover {
+                    // Text
+                    color: var(--accent-500);
+
+                    // Other
+                    transition: 0.3s;
+                }
+            }
+        }
+
+        > a {
+            // Size and Position
+            padding: 12px 24px;
+
+            // Text
+            color: white;
+            font-family: var(--HeaderFont);
+            letter-spacing: 2px;
+
+            // Background
+            background-color: transparent;
+            border: 2px solid white;
+
+            // Other
+            transition: 0.3s;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--accent-500);
+                border-color: var(--accent-500);
+                background-color: #333333;
+
+                // Other
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.site_logo {
+    // Text
+    color: white;
+    font-size: 36px;
+    font-family: var(--TitleFont);
+    letter-spacing: 2px;
+    font-weight: 400;
 }

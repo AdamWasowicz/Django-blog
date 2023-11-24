@@ -1,15 +1,40 @@
 {% extends "base.html" %}
+{% load static %}
+{% load compress %}
 
+{% block head %}
+    {% compress css %}
+    <link 
+        type="text/x-scss" 
+        href="{% static 'post/styles/register_user.scss' %}" 
+        rel="stylesheet" 
+        media="screen"
+    >
+    {% endcompress %}
+{% endblock head %}
 
 {% block body %}
-    <form action="{% url 'post-register' %}" method="POST">
-        {% csrf_token %}
-        {% for field in form  %}
-            {{ field.label }}
-            {{ field }}
-            {{ field.errors }}
-        {% endfor %}
+    <div class="register_user_body">
+        <form 
+            class="register_user_form" 
+            action="{% url 'post-register' %}" 
+            method="POST"
+        >
+            <div class="form_info">
+                <h2>Almost there! (PLACEHODLER)</h2>
+                <p>Fill your data and send it and we will create account for you.</p>
+            </div>
 
-        <button type="submit">Send</button>
-    </form>
+            {% csrf_token %}
+            {% for field in form  %}
+                <div class="field_container">
+                    <h3>{{ field.label }}</h3>
+                    {{ field }}
+                    {{ field.errors }}
+                </div>
+            {% endfor %}
+
+            <button type="submit">Send</button>
+        </form>
+    </div>  
 {% endblock body %}

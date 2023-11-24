@@ -25,10 +25,24 @@
 }
 
 body {
-    background-color: #ebebeb;
+    // Size and Position
+    min-height: 100vh;
+
+    // Flex
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // Background
+    background-color: #333333;
+
+    > main {
+        // Flex
+        flex-grow: 1;
+    }
 }
 
-nav {
+.main_navigation {
     // Size and Position
     padding: 24px;
     display: flex;
@@ -117,4 +131,19 @@ nav {
     font-family: var(--TitleFont);
     letter-spacing: 2px;
     font-weight: 400;
+}
+
+footer {
+    // Size and Position
+    padding: 18px 24px;
+
+    // Text
+    color: white;
+    font-family: var(--TextFont);
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: center;
+
+    // Background
+    background-color: #1f1f1f;
 }

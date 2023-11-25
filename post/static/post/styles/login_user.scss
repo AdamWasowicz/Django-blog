@@ -1,0 +1,115 @@
+.login_user_body {
+    // Size and Position
+    padding: 24px;
+}
+
+
+.login_user_form {
+    // Size and Position
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 18px;
+
+    // Flex
+    display: flex;
+    flex-direction: column;
+
+    // Background
+    border: 2px solid var(--accent-600);
+    background-color: var(--primary-500);
+
+    > .form_info {
+        // Size and Position
+        margin-bottom: 12px;
+
+        > h2 {
+            // Text
+            font-family: var(--TitleFont);
+            letter-spacing: 3px;
+            font-size: 48px;
+            font-weight: 500;
+            color: white;
+        }
+    }
+
+    > .field_container {
+        // Size and Position
+        margin-bottom: 18px;
+
+        // Flex
+        display: flex;
+        flex-direction: column;
+
+        > h3 {
+            // Size and Position
+            margin-bottom: 8px;
+
+            // Text
+            font-family: var(--HeaderFont);
+            letter-spacing: 2px;
+            font-size: 32px;
+            color: var(--accent-400);
+        }
+
+        > input {
+            // Size and Position
+            padding: 16px 28px;
+
+            // Text
+            font-family: var(--TextFont);
+            font-size: 18px;
+
+            // Other
+            outline: none;
+
+            &:focus {
+                // Other
+                border: 2px solid var(--accent-400);
+            }
+        }
+    }
+
+    > button {
+        // Size and Position
+        padding: 18px 28px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+        // Text
+        color: white;
+        font-family: var(--TextFont);
+        font-size: 24px;
+        letter-spacing: 2px;
+
+        // Background
+        background-color: transparent;
+        border: 3px solid white;
+
+        // Other
+        transition: 0.3s;
+
+        &:hover {
+            // Text
+            color: var(--accent-400);
+
+            // Background
+            border-color: var(--accent-400);
+
+            // Other
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    }
+
+    > a {
+
+        // Text
+        color: var(--accent-400);
+        font-family: var(--TextFont);
+        font-size: 18px;
+    }
+}

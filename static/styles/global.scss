@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --TitleFont: 'Roboto';
+    --HeaderFont: 'Merriweather Sans';
+    --TextFont: 'Lato';
+
+    --primary-800: #141414;
+    --primary-700: #1f1f1f;
+    --primary-600: #292929;
+    --primary-500: #333333;
+    --primary-400: #5c5c5c;
+    --primary-300: #858585;
+    --primary-200: #adadad;
+    --primary-100: #d6d6d6;
+
+    --accent-800: #01625a;
+    --accent-700: #019386;
+    --accent-600: #02c4b3;
+    --accent-500: #02f5e0;
+    --accent-400: #35f7e6;
+    --accent-300: #67f9ec;
+    --accent-200: #9afbf3;
+    --accent-100: #ccfdf9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

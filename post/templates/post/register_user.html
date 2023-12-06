@@ -35,6 +35,10 @@
                 </div>
             {% endfor %}
 
+            {% if error_msg %}
+                <h4 class="error_msg">{{ error_msg }}</h4>
+            {% endif %}
+
             <button type="submit">Send</button>
         </form>
     </div>  

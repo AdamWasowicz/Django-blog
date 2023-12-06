@@ -16,6 +16,7 @@
 
 {% block body %}
     <div class="login_user_body">
+
         <form 
             class="login_user_form"
             action="{% url 'post-user-login' %}"
@@ -33,6 +34,10 @@
                     {{ field.errors }}
                 </div>
             {% endfor %}
+
+            {% if error_msg %}
+                    <h4 class="error_msg">{{error_msg}}</h2>
+            {% endif %}
 
             <button type="submit">Send</button>
             <a href="{% url 'post-user-register' %}">I dont have account yet</a>

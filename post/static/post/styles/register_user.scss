@@ -16,8 +16,8 @@
     flex-direction: column;
 
     // Background
-    background-color: #292929;
-    border: 3px solid #858585;
+    background-color: var(--primary-500);
+    border: 4px solid var(--primary-300);
 
     .form_info {
         // Size and Position
@@ -75,6 +75,18 @@
         }
     }
 
+    > .error_msg {
+        // Size and Position
+        margin-bottom: 24px;
+
+        // Text
+        text-align: center;
+        font-family: var(--TextFont);
+        color: red;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
     > button {
         // Size nad Position
         padding: 12px 24px;
@@ -97,7 +109,7 @@
         &:hover {
             color: var(--accent-500);
             border-color: var(--accent-500);
-            background-color: #333333;
+            background-color: var(--primary-400);
 
             // Other
             transition: 0.3s;

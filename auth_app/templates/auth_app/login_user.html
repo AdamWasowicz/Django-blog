@@ -5,25 +5,25 @@
 
 {% block head %}
     {% compress css %}
-    <link 
-        type="text/x-scss" 
-        href="{% static 'post/styles/register_user.scss' %}" 
-        rel="stylesheet" 
-        media="screen"
-    >
+        <link 
+            type="text/x-scss" 
+            href="{% static 'auth_app/styles/login_user.scss' %}" 
+            rel="stylesheet" 
+            media="screen"
+        >
     {% endcompress %}
 {% endblock head %}
 
 {% block body %}
-    <div class="register_user_body">
+    <div class="login_user_body">
+
         <form 
-            class="register_user_form" 
-            action="{% url 'post-user-register' %}" 
+            class="login_user_form"
+            action="{% url 'auth_app-user-login' %}"
             method="POST"
         >
             <div class="form_info">
-                <h2>Welcome aboard</h2>
-                <p>Before you become one of us, you need to fill your data and send it and we will create account for you.</p>
+                <h2>Who are you?</h2>
             </div>
 
             {% csrf_token %}
@@ -36,10 +36,11 @@
             {% endfor %}
 
             {% if error_msg %}
-                <h4 class="error_msg">{{ error_msg }}</h4>
+                    <h4 class="error_msg">{{error_msg}}</h2>
             {% endif %}
 
             <button type="submit">Send</button>
+            <a href="{% url 'auth_app-user-register' %}">I dont have account yet</a>
         </form>
-    </div>  
+    </div>
 {% endblock body %}

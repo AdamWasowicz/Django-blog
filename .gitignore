@@ -6,7 +6,7 @@ db.sqlite3
 media
 
 # Other #
-django_blog_venv
+venv
 staticfiles
 
 # Backup files # 

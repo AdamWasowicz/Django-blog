@@ -23,7 +23,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'post',
+    'auth_app',
     'compressor',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -133,3 +133,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR / "uploads"
 MEDIA_URL = "/files/"
+
+SESSION_COOKIE_AGE = 60 * 60 * 2 # Two hours

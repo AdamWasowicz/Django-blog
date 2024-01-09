@@ -16,9 +16,10 @@ body {
     }
 }
 
-.main_navigation {
+// header.html
+.header {
     // Size and Position
-    padding: 24px;
+    padding: 24px 24px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,6 +45,10 @@ body {
 
         // Other
         list-style: none;
+        
+        > h2.userName {
+            color: red;
+        }
 
         > li {
             // Text
@@ -98,6 +103,7 @@ body {
     }
 }
 
+// logo.html
 .site_logo {
     // Text
     color: white;
@@ -105,8 +111,13 @@ body {
     font-family: var(--TitleFont);
     letter-spacing: 2px;
     font-weight: 400;
+
+    &:hover {
+        color: var(--accent-400);
+    }
 }
 
+// footer.html
 footer {
     // Size and Position
     padding: 18px 24px;

@@ -24,6 +24,10 @@ class RegisterUserView(View):
         if form.is_valid():
             form.save()
             return redirect('auth_app-user-login')
+        else:
+            return render(request, './auth_app/register_user.html', {
+                'form': form
+            })
 
 
 
@@ -41,6 +45,10 @@ class LoginUserView(View):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            redirect('auth_app-index')
+            return redirect('auth_app-index')
         else:
-            messages.info(request, 'Username OR Password is incorrect')
+            form = LoginForm(request.POST)
+            return render(request, './auth_app/login_user.html', {
+                'form': form,
+                'errorMsg': 'Error'
+            })

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Post index page
+{% endblock title %}
+
+{% block body %}
+    <main class="pageLayout">
+        <div>
+            {% for post in posts  %}
+                <p>hi</p>
+                {% include "post/post_element.html" with post=post %}
+            {% endfor %}
+        </div>
+    </main>
+{% endblock body %}
